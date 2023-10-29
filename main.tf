@@ -4,6 +4,12 @@
 ## Terraform configuration
 
 terraform {
+  cloud {
+    organization = "Nutrien"
+    workspaces {
+      name = "test-workspace"
+    }
+  }
   required_providers {
     random = {
       source  = "hashicorp/random"
